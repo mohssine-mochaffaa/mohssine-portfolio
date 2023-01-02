@@ -16,6 +16,61 @@ backdrop-filter: blur(4.5px);
 -webkit-backdrop-filter: blur(4.5px);
 
 }
+
+.c1{
+  animation-name: animate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+.c2{
+  animation-name: animate2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+
+}
+.c3{
+  animation-name: animate2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+background-color: #4c00ff;
+}
+
+@keyframes animate {
+  from{
+    transform: scale(0);
+    transform: rotate(0deg);
+  }
+  to{    
+    transform: scale(1);
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  from{
+    transform: scale(0);
+  }
+  to{    
+    transform: scale(1);
+
+  }
+}
+@keyframes animate3 {
+  from{
+    transform: scale(0);
+    transform: rotate(0deg);
+
+  }
+  to{    
+    transform: scale(1);
+    transform: rotate(360deg);
+
+  }
+}
+
+
 .logo{
   font-size: 22px;
   letter-spacing: 1px;

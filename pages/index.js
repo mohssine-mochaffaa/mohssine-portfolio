@@ -45,6 +45,7 @@ const style2 = {
 }
 
 const [design,setDesign] = useState(style)
+const [visibility,setVisibility] = useState("none");
 
 useEffect(()=>{
   if(val){
@@ -55,8 +56,29 @@ useEffect(()=>{
 
   }
 },[val])
+useEffect(()=>{
+  const bodyStyle = document.querySelector('body');
+  const intro = document.querySelector('.intro');
+
+  console.log(bodyStyle)
+  bodyStyle.style.overflowY = 'hidden';
+  setTimeout(() => {
+    bodyStyle.style.overflowY = 'scroll';
+    intro.style.display = 'none';
+  }, 4000);
+},[]);
+
   return (
     <div style={{backgroundColor:design.bg}} className={styles.container}>
+      <div className='intro' style={{width:"100%",height:"100vh",backgroundColor:"black",position:"absolute",zIndex:"100",display:"flex",alignItems:"center",justifyContent:"center"}}>
+        <div className={styles.c1} style={{borderRadius:"500px",display:"flex",width:"50px",height:"50px",justifyContent:"center",alignItems:"center",border:"2px dashed #6f00ff"}}>
+        <div className='c2' style={{borderRadius:"500px",width:"40px",height:"40px",display:"flex",justifyContent:"center",alignItems:"center",border:"2px solid white"}}>
+        <div className='c3' style={{borderRadius:"500px",width:"30px",height:"30px",border:"2px dashed #4c00ff",display:"flex",justifyContent:"center",alignItems:"center"}}>
+          <div style={{backgroundColor:"orange",width:"10px",height:"10px",borderRadius:'500px',border:'1px solid white'}}></div>
+        </div>
+        </div>
+        </div>
+      </div>
       <Head>
         <title>Mochaffaa Mohssine</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -67,11 +89,12 @@ useEffect(()=>{
         <ReactSwitch
         checked={val}
         onChange={()=> setVal(!val)}
-        checkedHandleIcon={<center style={{display:"flex",alignItems:"center",justifyContent:"center",height:"100%"}}><BsFillBrightnessHighFill/></center>}
-        uncheckedHandleIcon={<center style={{display:"flex",alignItems:"center",justifyContent:"center",height:"100%"}}><BsFillCloudMoonFill/></center>}
+        checkedHandleIcon={<center style={{display:"flex",alignItems:"center",justifyContent:"center",height:"100%"}}><BsFillBrightnessHighFill color='gray'/></center>}
+        uncheckedHandleIcon={<center style={{display:"flex",alignItems:"center",justifyContent:"center",height:"100%"}}><BsFillCloudMoonFill color='gray'/></center>}
         checkedIcon={""}
         uncheckedIcon={""}
         height={22}
+        width={50}
         handleDiameter={30}
       />
 
