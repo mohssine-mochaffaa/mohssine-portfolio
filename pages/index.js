@@ -40,7 +40,7 @@ const style2 = {
   color:'black',
   bg:'white',
   navBg:"white",
-  bord:"1px solid black",
+  bord:"1px solid gray",
 
 }
 
@@ -134,8 +134,59 @@ useEffect(()=>{
 </ParallaxBanner>
 <div>
   <br />
-  <span style={{color:design.color,fontWeight:"bold",marginLeft:"20px",textDecorationLine:"underline",fontSize:"25px"}}>Javascript stack</span>
+  <span style={{color:design.color,fontWeight:"bold",marginLeft:"20px",textDecorationLine:"underline",fontSize:"25px"}}>My best stack</span>
 </div>
+<div className={styles.infos2}>
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/html.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/css.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/react.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/database.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/js.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/c.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/bootstrap.png"/>
+  </div>
+  </div>
+
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/firebase.png"/>
+  </div>
+  </div>
+
+
+</div >
 <div className={styles.infos2}>
   <div className={styles.circle}>
   <center>
@@ -187,6 +238,15 @@ useEffect(()=>{
   <p style={{color:design.color}}>Node js</p>
   <div className={styles.circleBox}>
   <CircularProgressbar styles={buildStyles({pathColor: 'green',})} value={65} text={`${65}%`} />
+  </div>
+  </center>
+  </div>
+
+  <div className={styles.circle}>
+  <center>
+  <p style={{color:design.color}}>C</p>
+  <div className={styles.circleBox}>
+  <CircularProgressbar styles={buildStyles({pathColor: 'blue',})} value={70} text={`${70}%`} />
   </div>
   </center>
   </div>
