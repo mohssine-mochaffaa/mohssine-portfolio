@@ -335,7 +335,6 @@ useEffect(()=>{
 
           </center>
          
-          
       </Carousel>
 </div>
 </center>
