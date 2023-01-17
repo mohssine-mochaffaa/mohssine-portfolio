@@ -12,8 +12,10 @@ import Carousel from 'nuka-carousel/lib/carousel'
 import { BsFillBrightnessHighFill,BsFillCloudMoonFill } from "react-icons/bs";
 import { FaInstagram,FaTiktok,FaWhatsapp,FaFacebook} from "react-icons/fa";
 import ReactSwitch from 'react-switch';
+import { motion, useScroll } from "framer-motion"
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
   const [projects,setProjects] = useState([]);
   const [val,setVal] = useState(false)
 
@@ -65,19 +67,31 @@ useEffect(()=>{
   setTimeout(() => {
     bodyStyle.style.overflowY = 'scroll';
     intro.style.display = 'none';
-  }, 4000);
+  }, 4500);
 },[]);
 
   return (
     <div style={{backgroundColor:design.bg}} className={styles.container}>
       <div className='intro' style={{width:"100%",height:"100vh",backgroundColor:"black",position:"absolute",zIndex:"100",display:"flex",alignItems:"center",justifyContent:"center"}}>
-        <div className={styles.c1} style={{borderRadius:"500px",display:"flex",width:"50px",height:"50px",justifyContent:"center",alignItems:"center",border:"2px dashed #6f00ff"}}>
-        <div className='c2' style={{borderRadius:"500px",width:"40px",height:"40px",display:"flex",justifyContent:"center",alignItems:"center",border:"2px solid white"}}>
-        <div className='c3' style={{borderRadius:"500px",width:"30px",height:"30px",border:"2px dashed #4c00ff",display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <motion.div transition={{repeat: Infinity,duration: 4,
+        ease: "easeInOut",}} animate={{
+      scale: [1, 2, 2, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}className={styles.c1} style={{borderRadius:"500px",display:"flex",width:"50px",height:"50px",justifyContent:"center",alignItems:"center",border:"2px dashed #6f00ff"}}>
+        <motion.div transition={{repeat: Infinity,duration: 4,
+        ease: "easeInOut",}} animate={{
+      scale: [1, 1, 1, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],}} className='c2' style={{borderRadius:"500px",width:"40px",height:"40px",display:"flex",justifyContent:"center",alignItems:"center",border:"2px solid white"}}>
+        <motion.div transition={{repeat: Infinity,duration: 4,
+        ease: "easeInOut",}} animate={{
+      scale: [1, 1, 1, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],}} className='c3' style={{borderRadius:"500px",width:"30px",height:"30px",border:"2px dashed #4c00ff",display:"flex",justifyContent:"center",alignItems:"center"}}>
           <div style={{backgroundColor:"orange",width:"10px",height:"10px",borderRadius:'500px',border:'1px solid white'}}></div>
-        </div>
-        </div>
-        </div>
+        </motion.div>
+        </motion.div>
+        </motion.div>
       </div>
       <Head>
         <title>Mochaffaa Mohssine</title>
@@ -99,6 +113,8 @@ useEffect(()=>{
       />
 
       </div>
+      <motion.div style={{ scaleX: scrollYProgress ,zIndex:100,width:"100%",height:'4px',backgroundColor:design.color,position:"sticky",top:0}} />  
+
       <div style={{backgroundColor:design.bg}} className={styles.intro}>
         <div className={styles.introBox}>
           <div style={{zIndex:0}}>
@@ -122,21 +138,30 @@ useEffect(()=>{
         </div>
         
       </div>
-      <center className={styles.infos}>
+      <motion.center initial={{ opacity: 0}}
+  whileInView={{ opacity: 1 }} 
+        viewport={{ once: false, amount: 0.2 }}
+  className={styles.infos}>
         <Image alt='mohssine mochaffaa' width={150} height={150} style={{borderRadius:"100px"}} src="/assets/mohssine.png"/>
         <p className={styles.parag} style={{color:design.color}}>My name is MOHSSINE MOCHAFFAA I'm a junior programmer, from Casablanca Morocco, I have 5 years of experience in web development as a frontend and backend programmer with React js & Firebase, and 3 years of experiance in mobile app development, hosting and integrating projects to the web network,I specialize in designing and programming e-commerce sites and private profile sites, as well as programming management sites, I'm the creator of this website.</p>
-      </center>
+      </motion.center>
       <ParallaxBanner style={{ aspectRatio: '2 / 1' }}>
   <ParallaxBannerLayer style={{width:"100%"}} className="myParallax" image="/assets/image1.jpg" speed={-50} />
   <ParallaxBannerLayer style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
   <span className={styles.chap}>Experiences</span>
   </ParallaxBannerLayer>
 </ParallaxBanner>
-<div>
+<motion.div initial={{ opacity: 0}}
+  whileInView={{ opacity: 1 }} 
+        viewport={{ once: false, amount: 0.4 }}>
   <br />
   <span style={{color:design.color,fontWeight:"bold",marginLeft:"20px",textDecorationLine:"underline",fontSize:"25px"}}>My best stack</span>
-</div>
-<div className={styles.infos2}>
+</motion.div>
+
+<motion.div initial={{ opacity: 0}}
+  whileInView={{ opacity: 1 }} 
+        viewport={{ once: false, amount: 0.4 }} className={styles.infos2}>
+
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
   <Image layout='fill' objectFit='contain'  src="/assets/html.png"/>
@@ -186,8 +211,13 @@ useEffect(()=>{
   </div>
 
 
-</div >
-<div className={styles.infos2}>
+</motion.div >
+
+
+
+<motion.div initial={{ opacity: 0}}
+  whileInView={{ opacity: 1 }} 
+        viewport={{ once: false, amount: 0.4 }} className={styles.infos2}>
   <div className={styles.circle}>
   <center>
   <p style={{color:design.color}}>React js</p>
@@ -250,7 +280,7 @@ useEffect(()=>{
   </div>
   </center>
   </div>
-</div>
+</motion.div>
 
 <ParallaxBanner style={{ aspectRatio: '2 / 1' }}>
   <ParallaxBannerLayer style={{width:"100%"}} className="myParallax" image="/assets/simage.jpg" speed={-50} />
@@ -339,6 +369,7 @@ useEffect(()=>{
     <span style={{color:design.color,fontSize:"20px"}}>Mochaffaa Mohssine</span><br />
   </center>
 </footer><br />
+
     </div>
   )
 }
