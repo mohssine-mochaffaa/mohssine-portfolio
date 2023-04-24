@@ -210,6 +210,12 @@ useEffect(()=>{
   </div>
   </div>
 
+  <div className={styles.tech} style={{border:design.bord}}>
+  <div className={styles.techBox}>
+  <Image layout='fill' objectFit='contain'  src="/assets/next-js.svg"/>
+  </div>
+  </div>
+
 
 </motion.div >
 
@@ -280,6 +286,15 @@ useEffect(()=>{
   </div>
   </center>
   </div>
+
+  <div className={styles.circle}>
+  <center>
+  <p style={{color:design.color}}>Next.js</p>
+  <div className={styles.circleBox}>
+  <CircularProgressbar styles={buildStyles({pathColor: '#545454',})} value={75} text={`${75}%`} />
+  </div>
+  </center>
+  </div>
 </motion.div>
 
 <ParallaxBanner style={{ aspectRatio: '2 / 1' }}>
@@ -297,7 +312,7 @@ useEffect(()=>{
 
   <div style={{width:"100%"}} className="caro">
 <Carousel wrapAround={true} slidesToShow={1} autoplay={true} autoplayInterval={3500}>
-{projects.map((pro)=>{
+{projects.map((pro)=>{ 
         return(
           <center>
             <video controls muted  src={pro.data().imageUrl}/>
