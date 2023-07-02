@@ -282,7 +282,7 @@ useEffect(()=>{
   <center>
   <p style={{color:design.color}}>C</p>
   <div className={styles.circleBox}>
-  <CircularProgressbar styles={buildStyles({pathColor: 'blue',})} value={70} text={`${70}%`} />
+  <CircularProgressbar styles={buildStyles({pathColor: 'blue',})} value={75} text={`${75}%`} />
   </div>
   </center>
   </div>

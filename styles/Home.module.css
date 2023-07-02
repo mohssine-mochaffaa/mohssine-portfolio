@@ -218,7 +218,7 @@ background-color: #4c00ff;
       height: 80px;
   }
   .circle{
-      width: 180px;
+      width: 170px;
   }
   .introText{
       margin: 0;
@@ -252,6 +252,9 @@ background-color: #4c00ff;
   .typing{
       font-size: 20px;
   }
+  .circle{
+    width: 140px;
+}
 }
 
 .main {
