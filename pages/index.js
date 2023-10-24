@@ -120,7 +120,7 @@ useEffect(()=>{
       <div style={{backgroundColor:design.bg}} className={styles.intro}>
         <div className={styles.introBox}>
           <div style={{zIndex:0}}>
-          <Image alt='intro' src="/assets/intro.jpeg" layout="fill" objectFit="cover"/>
+          <Image loading="lazy" alt='intro' src="/assets/intro.jpeg" layout="fill" objectFit="cover"/>
           </div>
           <div className={styles.introText}>
           <div><span style={{color:"white",marginRight:"10px",fontWeight:"bold"}}>MOCHAFFAA MOHSSINE</span></div>
@@ -144,7 +144,7 @@ useEffect(()=>{
   whileInView={{ opacity: 1 }} 
         viewport={{ once: false, amount: 0.2 }}
   className={styles.infos}>
-        <Image alt='mohssine mochaffaa' width={150} height={150} style={{borderRadius:"100px"}} src="/assets/mohssine.png"/>
+        <Image loading="lazy" alt='mohssine mochaffaa' width={150} height={150} style={{borderRadius:"100px"}} src="/assets/mohssine.png"/>
         <p className={styles.parag} style={{color:design.color}}>My name is MOHSSINE MOCHAFFAA I'm a junior programmer, from Casablanca Morocco, I have 5 years of experience in web development as a frontend and backend programmer with React js & Firebase, and 3 years of experiance in mobile app development, hosting and integrating projects to the web network,I specialize in designing and programming e-commerce sites and private profile sites, as well as programming management sites, I'm the creator of this website.</p>
       </motion.center>
       <ParallaxBanner style={{ aspectRatio: '2 / 1' }}>
@@ -166,55 +166,55 @@ useEffect(()=>{
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/html.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/html.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/css.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/css.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/react.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/react.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/database.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/database.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/js.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/js.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/c.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/c.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/bootstrap.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/bootstrap.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/firebase.png"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/firebase.png"/>
   </div>
   </div>
 
   <div className={styles.tech} style={{border:design.bord}}>
   <div className={styles.techBox}>
-  <Image layout='fill' objectFit='contain'  src="/assets/next-js.svg"/>
+  <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/next-js.svg"/>
   </div>
   </div>
 
@@ -321,8 +321,8 @@ useEffect(()=>{
     <p style={{padding:0}}>Visit btpma.com</p> 
   </div>
   </a>
-<video style={{height:"220px",display:"block"}} controls disablePictureInPicture={true} muted={true} src={"/assets/btpmaVid.mp4"}/>
-<video style={{height:"220px",display:"block",marginTop:"20px"}} controls disablePictureInPicture={true} muted={true} src={"/assets/avnaVid.mp4"}/>
+<video loading="lazy" style={{height:"220px",display:"block"}} controls disablePictureInPicture={true} muted={true} src={"/assets/btpmaVid.mp4"}/>
+<video loading="lazy" style={{height:"220px",display:"block",marginTop:"20px"}} controls disablePictureInPicture={true} muted={true} src={"/assets/avnaVid.mp4"}/>
 
 </div>
 
@@ -334,7 +334,7 @@ useEffect(()=>{
 {projects.map((pro)=>{ 
         return(
           <center>
-            <video controls muted  src={pro.data().imageUrl}/>
+            <video loading="lazy" controls muted  src={pro.data().imageUrl}/>
           </center>
         )
       })}
@@ -350,21 +350,21 @@ useEffect(()=>{
 <Carousel wrapAround={true} slidesToShow={1} autoplay={true} autoplayInterval={3500}>
           <center style={{display:"flex",justifyContent:"center"}}>
             <div className={styles.phone}>
-            <Image fill objectFit='contain' src="/assets/p1.png"/>
+            <Image loading="lazy" fill objectFit='contain' src="/assets/p1.png"/>
             </div>
             <div className={styles.phone}>
-            <Image fill objectFit='contain' src="/assets/p2.png"/>
+            <Image loading="lazy" fill objectFit='contain' src="/assets/p2.png"/>
             </div>
           </center>
           <center style={{display:"flex",justifyContent:"center"}}>
           <div className={styles.phone}>
-            <Image layout='fill' objectFit='contain'  src="/assets/p3.png"/>
+            <Image loading="lazy" layout='fill' objectFit='contain'  src="/assets/p3.png"/>
             </div>
             <div className={styles.phone}> 
-            <Image layout='fill' objectFit='contain' src="/assets/p4.png"/>
+            <Image loading="lazy" layout='fill' objectFit='contain' src="/assets/p4.png"/>
             </div>
             <div className={styles.phone}>
-            <Image layout='fill' objectFit='contain' src="/assets/p5.png"/>
+            <Image loading="lazy" layout='fill' objectFit='contain' src="/assets/p5.png"/>
             </div>
 
           </center>
