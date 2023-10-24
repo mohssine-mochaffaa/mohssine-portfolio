@@ -29,7 +29,9 @@ array.push(doc);
 setProjects(array);
   }
   useEffect(()=>{
-    getVideos();
+    if (projects.length < 1) {
+      getVideos();
+    }
   },[]);
 const style = {
   color:'white',
@@ -302,13 +304,30 @@ useEffect(()=>{
   <ParallaxBannerLayer style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
   <span className={styles.chap}>Projects</span>
   </ParallaxBannerLayer>
-</ParallaxBanner>
+</ParallaxBanner> 
 <div style={{padding:"10px"}} className="infos">
 <br />
 <span style={{color:design.color}}>Take a look at some of our clients successful projects that were designed and programmed according to their requests in a short time and hight quality.</span>
 <center>
 <br />
-<span style={{color:design.color,fontWeight:"bold",marginLeft:"20px",textDecorationLine:"underline",fontSize:"25px"}}>Websites</span><br /><br />
+
+
+<span style={{color:design.color,fontWeight:"bold",marginLeft:"20px",textDecorationLine:"underline",fontSize:"25px"}}>My best creations</span><br /><br />
+
+
+<div style={{width:"100%",marginBottom:"20px"}} className="caro">
+  <a href="https://btpma.com" target='_blank'>
+  <div style={{color:design.color}} className={styles.visitTag}>
+    <p style={{padding:0}}>Visit btpma.com</p> 
+  </div>
+  </a>
+<video style={{height:"220px",display:"block"}} controls disablePictureInPicture={true} muted={true} src={"/assets/btpmaVid.mp4"}/>
+<video style={{height:"220px",display:"block",marginTop:"20px"}} controls disablePictureInPicture={true} muted={true} src={"/assets/avnaVid.mp4"}/>
+
+</div>
+
+<br />
+<span style={{color:design.color,fontWeight:"bold",marginLeft:"20px",textDecorationLine:"underline",fontSize:"25px",marginTop:"25px"}}>Other Websites</span><br /><br />
 
   <div style={{width:"100%"}} className="caro">
 <Carousel wrapAround={true} slidesToShow={1} autoplay={true} autoplayInterval={3500}>
