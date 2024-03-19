@@ -72,12 +72,16 @@ useEffect(()=>{
   }, 4500);
 },[]);
 
+useEffect(()=>{
+  window.scrollTo(0,0);  
+},[]); 
+ 
   return (
     <div style={{backgroundColor:design.bg}} className={styles.container}>
       <div className='intro' style={{width:"100%",height:"100vh",backgroundColor:"black",position:"absolute",zIndex:"100",display:"flex",alignItems:"center",justifyContent:"center"}}>
         <motion.div transition={{repeat: Infinity,duration: 4,
         ease: "easeInOut",}} animate={{
-      scale: [1, 2, 2, 1, 1],
+      scale: [1, 2, 2, 1, 1], 
       rotate: [0, 0, 270, 270, 0],
       borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}className={styles.c1} style={{borderRadius:"500px",display:"flex",width:"50px",height:"50px",justifyContent:"center",alignItems:"center",border:"2px dashed #6f00ff"}}>
         <motion.div transition={{repeat: Infinity,duration: 4,
