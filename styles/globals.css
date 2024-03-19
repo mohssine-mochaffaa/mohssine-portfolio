@@ -47,6 +47,24 @@ a{
   }
 }
 
+@media screen and (max-width:430px) {
+  video{
+    width: 350px;
+    height: 200px;
+  }
+}
+@media screen and (max-width:370px) {
+  video{
+    width: 320px;
+    height: 160px;
+  }
+}
+@media screen and (max-width:345px) {
+  video{
+    width: 300px;
+    height: 160px;
+  }
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

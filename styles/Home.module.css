@@ -279,6 +279,11 @@ background-color: #4c00ff;
   .circle{
     width: 140px;
 }
+.parag{
+  margin-left: 0px;
+  width: 90%;
+  font-size: 17px;
+}
 }
 
 .main {
